@@ -8,16 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class TargetAwareCriteriaTest extends TestCase
 {
-    /**
-     * @expectedException \Error
-     * @expectedExceptionMessageRegExp /Cannot instantiate abstract class/
-     */
-    public function testCannotInstantiate()
-    {
-        $c = new TargetAwareCriteria();
-    }
-
-    public function testConcreteClass()
+    public function testConcreteClass() : void
     {
         $this->assertSame(Foo::class, FooCriteria::getTargetClass());
         $this->assertSame('ASC', FooCriteria::ASC);
