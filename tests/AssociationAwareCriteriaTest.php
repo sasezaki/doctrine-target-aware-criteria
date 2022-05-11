@@ -8,16 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class AssociationAwareCriteriaTest extends TestCase
 {
-    /**
-     * @expectedException \Error
-     * @expectedExceptionMessageRegExp /Cannot instantiate abstract class/
-     */
-    public function testCannotInstantiate()
-    {
-        $c = new AssociationAwareCriteria();
-    }
-
-    public function testConcreteClass()
+    public function testConcreteClass() : void
     {
         $this->assertSame(Bar::class, BarCriteria::getTargetClass());
         $this->assertSame('ASC', BarCriteria::ASC);
