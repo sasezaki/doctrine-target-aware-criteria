@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\Criteria;
 
 /**
  * @template T
+ *
  * @template-implements TargetAwareCriteriaInterface<T>
  */
 abstract class TargetAwareCriteria extends Criteria implements TargetAwareCriteriaInterface
