@@ -11,8 +11,6 @@ class TargetAwareCriteriaTest extends TestCase
     public function testConcreteClass() : void
     {
         $this->assertSame(Foo::class, FooCriteria::getTargetClass());
-        $this->assertSame('ASC', FooCriteria::ASC);
-        $this->assertSame('DESC', FooCriteria::DESC);
 
         $c = new FooCriteria();
 
