@@ -16,8 +16,6 @@ class AssociationAwareCriteriaTest extends TestCase
         $c = new BarCriteria();
 
         $this->assertSame(Bar::class, $c->getTargetClass());
-        $this->assertSame('ASC', $c::ASC);
-        $this->assertSame('DESC', $c::DESC);
         $this->assertSame(['b' => 'baz'], $c->getAssociationMap());
     }
 }

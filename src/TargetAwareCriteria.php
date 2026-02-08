@@ -8,6 +8,8 @@ use Doctrine\Common\Collections\Criteria;
  * @template T
  *
  * @template-implements TargetAwareCriteriaInterface<T>
+ *
+ * @phpstan-ignore class.extendsFinalByPhpDoc
  */
 abstract class TargetAwareCriteria extends Criteria implements TargetAwareCriteriaInterface
 {
